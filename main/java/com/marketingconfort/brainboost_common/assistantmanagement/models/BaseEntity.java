@@ -23,5 +23,10 @@ public abstract class BaseEntity {
 
     @LastModifiedDate
     private LocalDateTime lastUpdated;
+    @Column(name = "creator_id", nullable = false)
+    private Long creatorId;
+
+    @Column(name = "last_modifier_id", nullable = false)
+    private Long lastModifierId;
 }
 

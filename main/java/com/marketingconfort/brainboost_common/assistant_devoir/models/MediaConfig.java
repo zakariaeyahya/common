@@ -12,12 +12,6 @@ import lombok.*;
 @AllArgsConstructor
 public class MediaConfig extends BaseEntity {
 
-    @Column(name = "creator_id", nullable = false)
-    private Long creatorId;
-
-    @Column(name = "last_modifier_id", nullable = false)
-    private Long lastModifierId;
-
     @Column(name = "config_id", nullable = false)
     private Long configId;
 

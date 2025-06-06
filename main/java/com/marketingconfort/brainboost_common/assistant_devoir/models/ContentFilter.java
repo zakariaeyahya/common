@@ -13,12 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 public class ContentFilter extends BaseEntity {
 
-    @Column(name = "creator_id", nullable = false)
-    private Long creatorId;
-
-    @Column(name = "last_modifier_id", nullable = false)
-    private Long lastModifierId;
-
     @Column(name = "assistant_id", nullable = false)
     private Long assistantId;
 

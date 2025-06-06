@@ -14,12 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 public class AssistantDevoirEnfant extends BaseEntity {
 
-    @Column(name = "creator_id", nullable = false)
-    private Long creatorId;
-
-    @Column(name = "last_modifier_id", nullable = false)
-    private Long lastModifierId;
-
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
@@ -34,8 +28,8 @@ public class AssistantDevoirEnfant extends BaseEntity {
     @Column(name = "education_level", nullable = false)
     private NiveauEducatif educationLevel;
 
-    @Column(name = "enabled", nullable = false)
-    private Boolean enabled = true;
+    @Column(name = "isActive ", nullable = false)
+    private Boolean isActive  = true;
 
     @ElementCollection
     @CollectionTable(

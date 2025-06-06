@@ -12,20 +12,14 @@ import lombok.*;
 @AllArgsConstructor
 public class AssistantConfiguration extends BaseEntity {
 
-    @Column(name = "creator_id", nullable = false)
-    private Long creatorId;
-
-    @Column(name = "last_modifier_id", nullable = false)
-    private Long lastModifierId;
-
     @Column(name = "assistant_id", nullable = false)
     private Long assistantId;
 
     @Column(name = "config_type", length = 50, nullable = false)
     private String configType;
 
-    @Column(name = "enabled", nullable = false)
-    private Boolean enabled = true;
+    @Column(name = "isActive ", nullable = false)
+    private Boolean isActive  = true;
 
     @Column(name = "ai_model_id")
     private Long aiModelId;

@@ -13,12 +13,6 @@ import java.util.List;
 @AllArgsConstructor
 public class HistoriqueInteractionsDevoir extends BaseEntity {
 
-    @Column(name = "creator_id", nullable = false)
-    private Long creatorId;
-
-    @Column(name = "last_modifier_id", nullable = false)
-    private Long lastModifierId;
-
     @Column(name = "user_id", nullable = false, unique = true)
     private Long userId;
 
