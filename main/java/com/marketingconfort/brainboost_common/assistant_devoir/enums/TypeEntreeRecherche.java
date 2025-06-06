@@ -1,5 +1,8 @@
 package com.marketingconfort.brainboost_common.assistant_devoir.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum TypeEntreeRecherche {
     TEXT("Texte"),
     IMAGE("Image"),
@@ -12,7 +15,4 @@ public enum TypeEntreeRecherche {
         this.displayName = displayName;
     }
 
-    public String getDisplayName() {
-        return displayName;
-    }
 }

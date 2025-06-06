@@ -1,5 +1,8 @@
 package com.marketingconfort.brainboost_common.assistant_devoir.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum AssistantStatus {
     ACTIVE("Actif"),
     INACTIVE("Inactif"),
@@ -10,9 +13,5 @@ public enum AssistantStatus {
 
     AssistantStatus(String displayName) {
         this.displayName = displayName;
-    }
-
-    public String getDisplayName() {
-        return displayName;
     }
 }

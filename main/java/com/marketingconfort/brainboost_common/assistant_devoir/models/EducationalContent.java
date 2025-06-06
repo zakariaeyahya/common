@@ -1,8 +1,8 @@
 package com.marketingconfort.brainboost_common.assistant_devoir.models;
 
+import com.marketingconfort.brainboost_common.assistantmanagement.models.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "educational_content")
@@ -10,11 +10,13 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EducationalContent {
+public class EducationalContent extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "creator_id", nullable = false)
+    private Long creatorId;
+
+    @Column(name = "last_modifier_id", nullable = false)
+    private Long lastModifierId;
 
     @Column(name = "assistant_id", nullable = false)
     private Long assistantId;
@@ -39,27 +41,4 @@ public class EducationalContent {
 
     @Column(name = "is_active", nullable = false)
     private Boolean isActive = true;
-
-    @Column(name = "created_date", nullable = false)
-    private LocalDateTime createdDate;
-
-    @Column(name = "last_modification_date", nullable = false)
-    private LocalDateTime lastModificationDate;
-
-    @Column(name = "creator_id", nullable = false)
-    private Long creatorId;
-
-    @Column(name = "last_modifier_id", nullable = false)
-    private Long lastModifierId;
-
-    @PrePersist
-    protected void onCreate() {
-        createdDate = LocalDateTime.now();
-        lastModificationDate = LocalDateTime.now();
-    }
-
-    @PreUpdate
-    protected void onUpdate() {
-        lastModificationDate = LocalDateTime.now();
-    }
 }

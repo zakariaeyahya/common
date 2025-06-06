@@ -1,5 +1,8 @@
 package com.marketingconfort.brainboost_common.assistant_devoir.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum StatusTraitement {
     EN_ATTENTE("En attente"),
     EN_COURS("En cours de traitement"),
@@ -13,7 +16,4 @@ public enum StatusTraitement {
         this.displayName = displayName;
     }
 
-    public String getDisplayName() {
-        return displayName;
-    }
 }

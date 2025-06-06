@@ -1,5 +1,8 @@
 package com.marketingconfort.brainboost_common.assistant_devoir.enums;
 
+import lombok.Getter;
+
+@Getter
 public enum NiveauEducatif {
     CP("Cours Préparatoire"),
     CE1("Cours Élémentaire 1"),
