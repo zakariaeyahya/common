@@ -10,7 +10,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class InterfaceDevoirEnfant extends BaseEntity {
+public class ChildHomeworkInterface extends BaseEntity {
 
     @Column(name = "assistant_id", nullable = false)
     private Long assistantId;

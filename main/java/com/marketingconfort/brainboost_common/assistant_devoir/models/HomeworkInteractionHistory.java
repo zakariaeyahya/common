@@ -11,12 +11,12 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class HistoriqueInteractionsDevoir extends BaseEntity {
+public class HomeworkInteractionHistory extends BaseEntity {
 
     @Column(name = "user_id", nullable = false, unique = true)
     private Long userId;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "historique_id")
-    private List<InteractionDevoir> interactions;
+    private List<HomeworkInteraction> interactions;
 }

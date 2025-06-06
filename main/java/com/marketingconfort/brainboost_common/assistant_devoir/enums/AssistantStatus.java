@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public enum AssistantStatus {
-    ACTIVE("Actif"),
-    INACTIVE("Inactif"),
-    MAINTENANCE("En maintenance"),
-    DISABLED("Désactivé");
+    ACTIVE("Active"),
+    INACTIVE("Inactive"),
+    MAINTENANCE("Under Maintenance"),
+    DISABLED("Disabled");
 
     private final String displayName;
 

@@ -3,16 +3,15 @@ package com.marketingconfort.brainboost_common.assistant_devoir.enums;
 import lombok.Getter;
 
 @Getter
-public enum TypeEntreeRecherche {
-    TEXT("Texte"),
+public enum SearchInputType {
+    TEXT("Text"),
     IMAGE("Image"),
     AUDIO("Audio"),
-    FILE("Fichier");
+    FILE("File");
 
     private final String displayName;
 
-    TypeEntreeRecherche(String displayName) {
+    SearchInputType(String displayName) {
         this.displayName = displayName;
     }
-
 }

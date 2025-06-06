@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class InteractionDevoir extends BaseEntity {
+public class HomeworkInteraction extends BaseEntity {
 
     @Column(name = "assistant_id", nullable = false)
     private Long assistantId;
@@ -40,7 +40,7 @@ public class InteractionDevoir extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "input_type", nullable = false)
-    private TypeEntreeRecherche inputType = TypeEntreeRecherche.TEXT;
+    private SearchInputType inputType = SearchInputType.TEXT;
 
     @Column(name = "ocr_result_id")
     private Long ocrResultId;
@@ -50,7 +50,7 @@ public class InteractionDevoir extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "processing_status", nullable = false)
-    private StatusTraitement processingStatus = StatusTraitement.EN_ATTENTE;
+    private ProcessingStatus processingStatus = ProcessingStatus.IN_PROGRESS;
 
     @Lob
     @Column(name = "raw_input_data")

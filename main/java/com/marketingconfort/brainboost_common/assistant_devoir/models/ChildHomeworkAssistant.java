@@ -12,7 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class AssistantDevoirEnfant extends BaseEntity {
+public class ChildHomeworkAssistant extends BaseEntity {
 
     @Column(name = "user_id", nullable = false)
     private Long userId;
@@ -26,7 +26,7 @@ public class AssistantDevoirEnfant extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "education_level", nullable = false)
-    private NiveauEducatif educationLevel;
+    private EducationLevel educationLevel;
 
     @Column(name = "isActive ", nullable = false)
     private Boolean isActive  = true;
